@@ -14,8 +14,8 @@ export class PokeApiService {
   constructor(private http: HttpClient) { }
 
   getList() {
-  // return this.http.get(this.url+`?limit=52&offset=0`);
-  return this.http.get(this.url+`?limit=100000&offset=0`);
+  return this.http.get(this.url+`?limit=52&offset=0`);
+  // return this.http.get(this.url+`?limit=100000&offset=0`);
   }
 
   getData(name: string) {
