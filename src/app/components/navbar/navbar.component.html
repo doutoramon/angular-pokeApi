@@ -3,13 +3,11 @@
         <img class="name" src="assets/img/pokeName/Pokedex.png" alt="">
     </div>
 
-    <form [formGroup]="searchForm" class="form mt-4" (submit)="search()">
+    <form class="form mt-4">
         <div class="input-group">
             <span class="input-group-text" id="inputGroup-sizing-sm">Buscar</span>
-            <input #searchDescription formControlName="search" [value]="nameSearch" type="search" class="form-control"
+            <input #input (keyup)="search(input.value)" type="search" class="form-control"
                 aria-describedby="inputGroup-sizing-sm" placeholder="Digite o nome do seu Pokemon">
         </div>
     </form>
-
-        <!-- <button type="submit" class="btn btn-primary">Buscar</button> -->
 </div>

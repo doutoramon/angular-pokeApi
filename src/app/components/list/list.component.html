@@ -1,10 +1,21 @@
 <!-- <app-card-pokemon [pokemons]="pokemons | filterByDescription"></app-card-pokemon> -->
-<app-navbar (eventoBusca)="test($event)"></app-navbar>
+<app-navbar (eventSearch)="getSearch($event)"></app-navbar>
 
+<div class="list">
+    <div class="card border-0" *ngFor="let pokemon of pokemons">
+        <a routerLink="details/{{pokemon.id}}" [title]="pokemon.name">
+            <div class="body">
+                <h1 class="poke-id">#{{ pokemon.id }}</h1>
+                <div class="img-block">
+                    <img class="img" [src]="pokemon.sprites?.other.dream_world.front_default" alt="">
+                </div>
+            </div>
 
-
-<app-card-pokemon ></app-card-pokemon>
-
-
-
-
+            <div class="types-block">
+                <ul class="types" *ngFor="let types of pokemon.types">
+                    <li class="name-type">{{ types.type.name | uppercase }}</li>
+                </ul>
+            </div>
+        </a>
+    </div>
+</div>
