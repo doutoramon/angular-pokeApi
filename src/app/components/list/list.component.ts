@@ -9,9 +9,8 @@ import { PokeApiService } from 'src/app/service/poke-api.service';
 })
 export class ListComponent implements OnInit {
 
-  pokemons: any[] = [];
-  nameType: Array<string> = [];
-  filter: string = '';
+  private setPokemons: any[] = [];
+  public getPokemons: any[] = [];
 
   constructor(
     private pokeApi: PokeApiService,
@@ -26,14 +25,23 @@ export class ListComponent implements OnInit {
     this.pokeApi.getList().subscribe((response: any) => {
       response.results.forEach((res: any) => {
         this.pokeApi.getData(res.name).subscribe((result: any) => {
-          this.pokemons.push(result);
-          console.log(this.pokemons);
+          this.setPokemons.push(result);
+          this.getPokemons = this.setPokemons;
+          console.log(this.setPokemons);
         });
       });
     });
   }
 
-  public getSearch (value: any) {
-    console.log(value);
+  public getSearch(value: any) {
+    const filter = this.setPokemons.filter((res: any) => {
+      return !res.name.indexOf(value.toLowerCase());
+    });
+
+    this.getPokemons = filter;
+  }
+
+  public goToData(data: any) {
+    this.router.navigateByUrl(`details/${data.id}`);
   }
 }

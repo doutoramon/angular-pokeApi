@@ -1,21 +1,23 @@
 <!-- <app-card-pokemon [pokemons]="pokemons | filterByDescription"></app-card-pokemon> -->
 <app-navbar (eventSearch)="getSearch($event)"></app-navbar>
 
-<div class="list">
-    <div class="card border-0" *ngFor="let pokemon of pokemons">
-        <a routerLink="details/{{pokemon.id}}" [title]="pokemon.name">
-            <div class="body">
-                <h1 class="poke-id">#{{ pokemon.id }}</h1>
-                <div class="img-block">
-                    <img class="img" [src]="pokemon.sprites?.other.dream_world.front_default" alt="">
-                </div>
-            </div>
+<section class="list">
+    <ng-template ngFor let-pokemon [ngForOf]="getPokemons">
+        <section class="card border-0">
+            <a [routerLink]="['details', pokemon.id]" [title]="pokemon.name" (click)="goToData(pokemon)">
+                <section class="body">
+                    <h1 class="poke-id">#{{ pokemon.id }}</h1>
+                    <section class="img-block">
+                        <img class="img" [src]="pokemon.sprites?.other.dream_world.front_default" alt="">
+                    </section>
+                </section>
 
-            <div class="types-block">
-                <ul class="types" *ngFor="let types of pokemon.types">
-                    <li class="name-type">{{ types.type.name | uppercase }}</li>
-                </ul>
-            </div>
-        </a>
-    </div>
-</div>
+                <section class="types-block">
+                    <ul class="types" *ngFor="let types of pokemon.types">
+                        <li class="name-type">{{ types.type.name | uppercase }}</li>
+                    </ul>
+                </section>
+            </a>
+        </section>
+    </ng-template>
+</section>

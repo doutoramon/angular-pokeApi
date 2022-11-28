@@ -8,21 +8,22 @@ import { map, tap } from 'rxjs/operators';
 })
 export class PokeApiService {
   poke = [];
-  url = 'https://pokeapi.co/api/v2/pokemon';
-  // url = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0';
+  private url = 'https://pokeapi.co/api/v2/pokemon';
+  // private url = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0';
+  public urlPokemon = 'https://pokeapi.co/api/v2/pokemon';
+  public urlName = 'https://pokeapi.co/api/v2/pokemon-species';
 
   constructor(private http: HttpClient) { }
 
   getList() {
-  return this.http.get(this.url+`?limit=52&offset=0`);
-  // return this.http.get(this.url+`?limit=100000&offset=0`);
+    return this.http.get(this.url + `?limit=52&offset=0`);
   }
 
   getData(name: string) {
-    return this.http.get(this.url+`/${name}`)
+    return this.http.get(this.url + `/${name}`)
   }
 
-  public getDetails(url: string):Observable<any>{
+  public getDetails(url: string): Observable<any> {
     return this.http.get<any>(url).pipe(
       map(
         res => res

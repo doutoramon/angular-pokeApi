@@ -4,13 +4,13 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  styles: [
+  /* styles: [
     `
     :host {
       background-color: black;
     }
   `
-  ]
+  ] */
 })
 export class HomeComponent implements OnInit {
 

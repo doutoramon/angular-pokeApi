@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListComponent } from './components/list/list.component';
-import { CardDetailsComponent } from './components/card-details/card-details.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import { CardDetailsComponent } from './components/card-details/card-details.com
     HomeComponent,
     NavbarComponent,
     DetailsComponent,
-    ListComponent,
-    CardDetailsComponent
+    ListComponent
   ],
   imports: [
     BrowserModule,
