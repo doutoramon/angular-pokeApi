@@ -35,17 +35,17 @@
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    /* background-color: rgb(92, 53, 90); */
+    background-color: rgb(49, 49, 49);
 }
 
 .area-first-container-left {
-    width: 27%;
+    width: 20%;
     height: 100%;
 }
 
 img.img {
     width: 200px;
-    height: 200px;
+    height: 300px;
 }
 
 .shape p {
@@ -53,10 +53,33 @@ img.img {
 }
 
 .area-first-container-right {
-    width: 63%;
+    width: 80%;
     height: 100%;
 }
 
+.name-types {
+    width: 30%;
+}
+
+.area-stats {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.area-progress {
+    width: 100%;
+}
+
+.value-progress {
+    margin-bottom: 2rem;
+}
+
+/*   */
+
 .area-stats p {
     font-size: 1rem;
+}
+
+li { 
+    list-style: none;
 }
