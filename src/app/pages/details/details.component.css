@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    background-color: rgb(49, 49, 49);
+    /* background-color: rgb(49, 49, 49); */
 }
 
 .area-first-container-left {
@@ -67,11 +67,13 @@ img.img {
 }
 
 .area-progress {
-    width: 100%;
+    width: 90%;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 
 .value-progress {
-    margin-bottom: 2rem;
+    margin-bottom: 2.1rem;
 }
 
 /*   */
