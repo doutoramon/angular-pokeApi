@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CardPokemonComponent } from './components/list/card-pokemon/card-pokemon.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DetailsComponent } from './pages/details/details.component';
@@ -15,7 +14,6 @@ import { ListComponent } from './components/list/list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CardPokemonComponent,
     HomeComponent,
     NavbarComponent,
     DetailsComponent,

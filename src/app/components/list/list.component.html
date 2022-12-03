@@ -1,10 +1,23 @@
 <!-- <app-card-pokemon [pokemons]="pokemons | filterByDescription"></app-card-pokemon> -->
-<app-navbar (eventoBusca)="test($event)"></app-navbar>
+<app-navbar (eventSearch)="getSearch($event)"></app-navbar>
 
+<section class="list">
+    <ng-template ngFor let-pokemon [ngForOf]="getPokemons">
+        <section class="card border-0">
+            <a [routerLink]="['details', pokemon.id]" [title]="pokemon.name" (click)="goToData(pokemon)">
+                <section class="body">
+                    <h1 class="poke-id">#{{ pokemon.id }}</h1>
+                    <section class="img-block">
+                        <img class="img" [src]="pokemon.sprites?.other.dream_world.front_default" alt="">
+                    </section>
+                </section>
 
-
-<app-card-pokemon ></app-card-pokemon>
-
-
-
-
+                <section class="types-block">
+                    <ul class="types" *ngFor="let types of pokemon.types">
+                        <li class="name-type">{{ types.type.name | uppercase }}</li>
+                    </ul>
+                </section>
+            </a>
+        </section>
+    </ng-template>
+</section>

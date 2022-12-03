@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,23 +7,15 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class NavbarComponent implements OnInit {
 
-  searchForm!: FormGroup;
-  nameSearch: string = '';
-  @Output() eventoBusca = new EventEmitter();
+  @Output() public eventSearch: EventEmitter<String> = new EventEmitter();
 
-  constructor(
-    private formBuilder: FormBuilder
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.searchForm = this.formBuilder.group({
-      search: ['']
-    });
   }
 
-  search() {
-    this.nameSearch = this.searchForm.get('search')?.value;
-    this.eventoBusca.emit({busca: this.nameSearch});
+  public search(value: string) {
+    this.eventSearch.emit(value);
   }
 
 }

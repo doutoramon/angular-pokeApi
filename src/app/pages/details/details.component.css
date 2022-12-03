@@ -1,0 +1,87 @@
+.container-fluid {
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    background-color: #252222;
+    
+}
+
+.details-area {
+    width: 85%;
+    margin-top: 5%;
+    border: 1px solid rgb(107, 107, 107);
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #302c2c;
+    border-bottom: 3px solid rgb(226, 226, 226);
+}
+
+.id-area {
+    margin: 0 0 0 15px;
+}
+
+.first-container {
+    margin-top: 3%;
+}
+
+.area-first-container {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    /* background-color: rgb(49, 49, 49); */
+}
+
+.area-first-container-left {
+    width: 20%;
+    height: 100%;
+}
+
+img.img {
+    width: 200px;
+    height: 300px;
+}
+
+.shape p {
+    font-size: 2rem;
+}
+
+.area-first-container-right {
+    width: 80%;
+    height: 100%;
+}
+
+.name-types {
+    width: 30%;
+}
+
+.area-stats {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.area-progress {
+    width: 90%;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.value-progress {
+    margin-bottom: 2.1rem;
+}
+
+/*   */
+
+.area-stats p {
+    font-size: 1rem;
+}
+
+li { 
+    list-style: none;
+}
