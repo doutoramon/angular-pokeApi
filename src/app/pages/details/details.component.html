@@ -19,17 +19,12 @@
                         <div class="image">
                             <img class="img" [src]="pokemon[0]?.sprites?.other.dream_world.front_default" alt="">
                         </div>
-
-                        <div class="shape">
-                            <p> {{ pokemon[1].shape.name | titlecase }} </p>
-                        </div>
                     </div>
 
                     <div class="area-first-container-right">
                         <div class="area-name">
                             <h2 class="name"> {{ pokemon[0].name | titlecase }} </h2>
                         </div>
-
                         <div class="area-stats">
                             <div class="name-types">
                                 <ul *ngFor="let stat of pokemon[0].stats">
@@ -40,7 +35,7 @@
                             <div class="area-progress">
                                 <ul *ngFor="let stat of pokemon[0].stats">
                                     <li class="value-progress">
-                                        <div class="progress" style="height: 7px;">
+                                        <div class="progress" style="height: 9px;">
                                             <div class="progress-bar" role="progressbar"
                                                 [style.width]="stat.base_stat + '%'" aria-valuenow="50"
                                                 aria-valuemin="0" aria-valuemax="100">
@@ -53,6 +48,14 @@
                     </div>
                 </div>
             </div>
+
+            <!-- <hr class="my-4">
+
+            <div class="second-container">
+                <div class="area-second-container">
+                        <p class="profile text-center">Perfil</p>
+                </div>
+            </div> -->
 
 
         </section>

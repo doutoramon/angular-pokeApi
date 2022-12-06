@@ -57,13 +57,19 @@ img.img {
     height: 100%;
 }
 
-.name-types {
-    width: 30%;
-}
 
 .area-stats {
     display: flex;
     /* flex-direction: column; */
+}
+
+.name-types {
+    width: 30%;
+    
+}
+
+.name-types ul {
+   padding: 0 0 0 0;
 }
 
 .area-progress {
@@ -73,15 +79,32 @@ img.img {
 }
 
 .value-progress {
-    margin-bottom: 2.1rem;
+    margin-bottom: 2rem;
 }
 
 /*   */
 
 .area-stats p {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 li { 
     list-style: none;
+}
+
+.second-container {
+    margin-top: 3%;
+}
+
+.area-second-container {
+    width: 90%;
+    height: 70%;
+    /* display: flex;
+    flex-direction: row; */
+    margin: 0 auto;
+    background-color: rgb(49, 49, 49);
+}
+
+.profile {
+    font-size: 2rem;
 }
